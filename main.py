@@ -824,6 +824,7 @@ class DataOverviewPage(BasePage):
         load_dotenv()
         # 修复模型名称为官方支持的gpt-3.5-turbo，移除可能导致错误的early_stopping_method参数
         model = ChatOpenAI(
+            api_key = 'hk-vnryfs10000554412c1b5de6e3ae552ac03366f341269b21',
             model='gpt-3.5-turbo',  # 替换为官方支持的模型名称
             base_url='https://twapi.openai-hk.com/v1',
             # 移除未定义的early_stopping_method参数
