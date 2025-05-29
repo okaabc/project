@@ -65,8 +65,9 @@ PROMPT_TEMPLATE = """你是一位数据分析助手，你的回应内容取决�
 def dataframe_agent(df, query):
     load_dotenv()
     model = ChatOpenAI(
-        api_key='hk-vnryfs10000554412c1b5de6e3ae552ac03366f341269b21',
-        model="gpt-3.5-turbo",  # 修改为GPT模型
+        model="deepseek-chat",
+        base_url='https://api.deepseek.com',
+        api_key='sk-b09dda44fc5f40e9aeeda1f23b0ee51f',
         temperature=0
     )
     agent = create_pandas_dataframe_agent(
