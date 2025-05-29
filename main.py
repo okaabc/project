@@ -72,9 +72,13 @@ def setup_chinese_font():
         # 设置全局字体配置
         if available_font_path:
             # 设置 matplotlib 使用找到的字体文件
-            plt.rcParams['font.family'] = 'sans-serif'
+            plt.rcParams['font.family'] = 'SimHei'
+            # plt.rcParams['font.family'] = 'sans-serif'
             plt.rcParams['font.sans-serif'] = [available_font_name]
             plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
+
+            plt.rcParams['font.family'] = 'SimHei'
+
 
             # 设置 seaborn 使用相同字体
             sns.set(font=available_font_name)
